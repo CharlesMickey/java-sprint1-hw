@@ -11,14 +11,15 @@ public class Main {
       int commandNumber = scanner.nextInt();
       if (commandNumber == 1) {
         stepTracker.addNewNumberStepsPerDay();
-      }
-      if (commandNumber == 2) {
+      } else if (commandNumber == 2) {
         stepTracker.changeStepGoal();
-      }
-      if (commandNumber == 3) {
+      } else if (commandNumber == 3) {
         stepTracker.printStatistic();
+      } else if (commandNumber == 0) {
+        return;
+      } else {
+        System.out.println ("Кажется такой команды нет...;(");
       }
-      if (commandNumber == 0) return;
     }
   }
 
