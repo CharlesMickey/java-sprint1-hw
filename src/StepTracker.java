@@ -102,14 +102,14 @@ public class StepTracker {
       "."
     );
     System.out.println(
-      "Дистаниция за " +
+      "Дистанция за " +
       monthNumber +
       " месяц равна " +
       (converter.convertToKm(sumSteps)) +
       " км."
     );
     System.out.println(
-      "Сожженно ккалорий за " +
+      "Сожжено килокалорий за " +
       monthNumber +
       " месяц " +
       (converter.convertStepsToKilocalories(sumSteps)) +
