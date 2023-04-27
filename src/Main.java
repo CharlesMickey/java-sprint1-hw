@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// Привет, Семен!)
+
 public class Main {
 
   public static void main(String[] arg) {
@@ -8,8 +10,7 @@ public class Main {
 
     while (true) {
       printMenu();
-
-      if (scanner.hasNextInt()) {
+      try {
         int commandNumber = scanner.nextInt();
 
         if (commandNumber == 1) {
@@ -23,20 +24,20 @@ public class Main {
         } else {
           System.out.println("Кажется такой команды нет...;(");
         }
-      } else {
-        System.out.println("Команда - это число...;)");
+      } catch (Exception e) {
+        System.out.println(
+          "Пожалуйста, в следующий раз вводите цифры. Хорошего дня и настроения :)"
+        );
         scanner.nextLine();
       }
     }
   }
 
   public static void printMenu() {
-    System.out.println(
-      "Введите команду: " +
-      "1: Указать пройденное количество шагов, " +
-      "2: Задать цель по количеству шагов в день, " +
-      "3: Статистика за месяц, " +
-      "0: Выход"
-    );
+    System.out.println("Введите команду:");
+    System.out.println("1: Указать пройденное количество шагов");
+    System.out.println("2: Задать цель по количеству шагов в день");
+    System.out.println("3: Статистика за месяц");
+    System.out.println("0: Выход");
   }
 }

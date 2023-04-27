@@ -1,7 +1,7 @@
 public class Converter {
 
-  int stepLength = 75;
-  int caloriePerStep = 50;
+  final int stepLength = 75;
+  final int caloriePerStep = 50;
 
   int convertToKm(int steps) {
     int kmPassed = 0;
