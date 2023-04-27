@@ -17,7 +17,7 @@ public class StepTracker {
   }
 
   public static int checkForNumber(Scanner scanner) {
-    if (scanner.hasNextInt() != true) {
+    if (!scanner.hasNextInt()) {
       System.out.println("Команда - это число...;)");
       scanner.nextLine();
       return -1;
