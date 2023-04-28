@@ -1,14 +1,14 @@
 public class Converter {
 
-  final int stepLength = 75;
-  final int caloriePerStep = 50;
+  final int STEP_LENGTH = 75;
+  final int CALORIE_PER_STEP = 50;
 
   int convertToKm(int steps) {
     int kmPassed = 0;
     if (steps <= 0) {
       return kmPassed;
     } else {
-      kmPassed = (steps * stepLength / 100) / 1000;
+      kmPassed = (steps * STEP_LENGTH / 100) / 1000;
     }
     return kmPassed;
   }
@@ -18,7 +18,7 @@ public class Converter {
     if (steps <= 0) {
       return kilocaloriesPassed;
     } else {
-      kilocaloriesPassed = steps * caloriePerStep / 1000;
+      kilocaloriesPassed = steps * CALORIE_PER_STEP / 1000;
     }
     return kilocaloriesPassed;
   }
