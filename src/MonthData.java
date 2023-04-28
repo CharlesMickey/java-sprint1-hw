@@ -31,18 +31,17 @@ public class MonthData {
     int finalSeries = 0;
     for (int i = 0; i < days.length; i++) {
       if (goalByStepsPerDay <= days[i]) {
-        currentSeries = currentSeries + 1;
-      } else if (
-        (goalByStepsPerDay > days[i] || (i == days.length - 1)) &&
-        currentSeries > finalSeries
-      ) {
-        finalSeries = currentSeries;
-        currentSeries = 0;
+        currentSeries++;
       } else {
+        if (currentSeries > finalSeries) {
+          finalSeries = currentSeries;
+        }
         currentSeries = 0;
       }
     }
-
+    if (currentSeries > finalSeries) {
+      finalSeries = currentSeries;
+    }
     return finalSeries;
   }
 }
